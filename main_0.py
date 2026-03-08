@@ -43,32 +43,11 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        
+
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_a:
-                steps = dictionary_1["K_a"]
-                control_func(FILE_NAME, steps)
+            if event.key in dictionary_1:
+                control_func(FILE_NAME, dictionary_1[event.key])
+        
+        
+        
 
-            elif event.key == pygame.K_x:
-                steps = dictionary_1["K_x"]
-                control_func(FILE_NAME, steps)
-
-            elif event.key == pygame.K_c:
-                steps = dictionary_1["K_c"]
-                control_func(FILE_NAME, steps)
-
-            elif event.key == pygame.K_v:
-                steps = dictionary_1["K_v"]
-                control_func(FILE_NAME, steps)
-
-            elif event.key == pygame.K_b:
-                steps = dictionary_1["K_b"]
-                control_func(FILE_NAME, steps)
-
-            elif event.key == pygame.K_n:
-                steps = dictionary_1["K_n"]
-                control_func(FILE_NAME, steps)
-            
-            elif event.key == pygame.K_m:
-                steps = dictionary_1["K_m"]
-                control_func(FILE_NAME, steps)
