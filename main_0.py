@@ -3,10 +3,17 @@ import librosa
 import soundfile as sf
 import io
 
-
 FILE_NAME = r"D:\Sintez\noteC.mp3"
 
-dictionary_1 = {"K_a": 4, "K_x": 8, "K_c": 12, "K_v": 16, "K_b": 20, "K_n": 24, "K_m": 28 }
+dictionary_1 = {
+    
+    pygame.K_z: -1, pygame.K_x: -2, pygame.K_c: -3, pygame.K_v: -4, pygame.K_b: -5, pygame.K_n: -6, pygame.K_m: -7,
+    
+    pygame.K_a: 1, pygame.K_s: 2, pygame.K_d: 3, pygame.K_f: 4, pygame.K_g: 5, pygame.K_h: 6, pygame.K_j: 7,
+
+    pygame.K_q: 8, pygame.K_w: 9, pygame.K_e: 10, pygame.K_r: 11, pygame.K_t: 12, pygame.K_y: 13, pygame.K_u: 14
+}
+
 
 pygame.init()
 pygame.mixer.init()
